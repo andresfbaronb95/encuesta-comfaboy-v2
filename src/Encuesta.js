@@ -37,18 +37,24 @@ const Encuesta = () => {
         setImagen(img);
     };
 
-    const enviarRespuestas = () => {
-        const encabezados = preguntas.map(p => p.texto).join(",");
-        const valores = preguntas.map(p => respuestas[p.id] || "").join(",");
-        const csv = `${encabezados}\n${valores}`;
-        const blob = new Blob([csv], { type: 'text/csv' });
-        const enlace = document.createElement('a');
-        enlace.href = URL.createObjectURL(blob);
-        enlace.download = 'respuestas.csv';
-        document.body.appendChild(enlace);
-        enlace.click();
-        document.body.removeChild(enlace);
-        setEnviada(true);
+    const enviarRespuestas = async () => {
+        const scriptURL = "PEGAR_AQUÍ_LA_URL_DEL_SCRIPT";
+        
+        const datos = {};
+        preguntas.forEach((p) => {
+            datos[p.id] = respuestas[p.id] || "";
+        });
+    
+        try {
+            await fetch(scriptURL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(datos),
+            });
+            setEnviada(true);
+        } catch (error) {
+            console.error("Error al enviar:", error);
+        }
     };
 
     return (
