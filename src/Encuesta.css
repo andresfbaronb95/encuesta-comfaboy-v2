@@ -1,0 +1,128 @@
+.encuesta-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #F57C00; /* Naranja */
+}
+
+.encuesta-titulo {
+    color: #0074B7; /* Azul */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pregunta-container {
+    background: #F5F5F5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pregunta-texto {
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-animado {
+    border: 2px solid #0074B7;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.input-animado:focus {
+    border-color: #F57C00;
+    box-shadow: 0px 0px 5px rgba(245, 124, 0, 0.5);
+}
+
+.opciones-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-opcion {
+    background: rgb(255, 255, 255);
+    color: #0074B7;
+    border: 2px solid #0074B7;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-opcion:hover,
+.btn-opcion.seleccionado {
+    background: #F57C00;
+    color: white;
+    border-color: #F57C00;
+}
+
+.btn-enviar {
+    background: #0074B7;
+    border: none;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #F57C00;
+}
+
+.imagen-respuesta {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.imagen-respuesta img {
+    max-width: 80px;
+    height: auto;
+}
+
+.mensaje-enviado {
+    color: #0074B7;
+}
+
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    font-family: 'Patrick Hand', 'Comic Sans MS', cursive;
+}
+
+.animacion-cohete {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    width: 100px;
+    animation: mover-cohete 3s linear forwards;
+}
+
+@keyframes mover-cohete {
+    from {
+        left: -100px;
+    }
+    to {
+        left: 100%;
+    }
+}

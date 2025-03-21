@@ -1,0 +1,37 @@
+body {
+  background-color: #5a8ed5; /* Color de fondo claro */
+  font-family: "Arial", sans-serif;
+}
+
+.encuesta-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #005bac; /* Azul Comfaboy */
+}
+
+.card {
+  border: 3px solid #ff8c00; /* Naranja Comfaboy */
+  background-color: white;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+button {
+  background-color: #005bac; /* Azul */
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff8c00; /* Naranja */
+}
