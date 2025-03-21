@@ -38,7 +38,7 @@ const Encuesta = () => {
     };
 
     const enviarRespuestas = async () => {
-        const scriptURL = "PEGAR_AQUÍ_LA_URL_DEL_SCRIPT";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzjY6rINDPTLD5KgdAf140jRWp2Ij0hJaVJC9sSeHGfP0P052kAceEmGbxKrakvEzrz/exec";
         
         const datos = {};
         preguntas.forEach((p) => {
