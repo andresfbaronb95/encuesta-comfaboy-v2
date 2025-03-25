@@ -38,24 +38,37 @@ const Encuesta = () => {
     };
 
     const enviarRespuestas = async () => {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbzjY6rINDPTLD5KgdAf140jRWp2Ij0hJaVJC9sSeHGfP0P052kAceEmGbxKrakvEzrz/exec";
-        
-        const datos = {};
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxtHRYRuXbN7Lvwh8lyndR6hDhaoNNEaqTsmE4XVqS6e0kKIG3qRGMzFHncTe1xi4ET/exec"; // Pega aquí la URL que copiaste de Apps Script
+    
+        const formData = new URLSearchParams();
         preguntas.forEach((p) => {
-            datos[p.id] = respuestas[p.id] || "";
+            formData.append(p.id, respuestas[p.id] || "");
         });
     
+        console.log("Datos enviados:", Object.fromEntries(formData));
+    
         try {
-            await fetch(scriptURL, {
+            const response = await fetch(scriptURL, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(datos),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: formData.toString(),
             });
-            setEnviada(true);
+    
+            if (response.ok) {
+                setEnviada(true);
+            } else {
+                console.error("Error en la respuesta del servidor");
+            }
         } catch (error) {
             console.error("Error al enviar:", error);
         }
     };
+    
+    
+    
+    
+       
+    
 
     return (
         <div className="container encuesta-container">
@@ -102,8 +115,3 @@ const Encuesta = () => {
 };
 
 export default Encuesta;
-
-    ;
-;
-
-
