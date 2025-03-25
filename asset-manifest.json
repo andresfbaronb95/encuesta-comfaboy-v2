@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/encuesta-comfaboy/static/css/main.69b92a5a.css",
+    "main.js": "/encuesta-comfaboy/static/js/main.fcf85b43.js",
+    "static/js/453.e1e3daad.chunk.js": "/encuesta-comfaboy/static/js/453.e1e3daad.chunk.js",
+    "static/media/rocket.gif": "/encuesta-comfaboy/static/media/rocket.adae61283c4c052948a8.gif",
+    "index.html": "/encuesta-comfaboy/index.html",
+    "main.69b92a5a.css.map": "/encuesta-comfaboy/static/css/main.69b92a5a.css.map",
+    "main.fcf85b43.js.map": "/encuesta-comfaboy/static/js/main.fcf85b43.js.map",
+    "453.e1e3daad.chunk.js.map": "/encuesta-comfaboy/static/js/453.e1e3daad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69b92a5a.css",
+    "static/js/main.fcf85b43.js"
+  ]
+}
